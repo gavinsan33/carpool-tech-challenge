@@ -58,14 +58,13 @@ const TinderCard = ({ match, onThumbsUp, onThumbsDown }: TinderCardProps) => {
         {/* Bottom Section */}
         <div className="space-y-4">
           {/* Route Display */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-lg shadow-lg p-2">
-            <RouteDisplay 
-              startLocation={match.startLocation}
-              endLocation={match.endLocation}
-              startDistanceDelta={match.startDistanceDelta}
-              endDistanceDelta={match.endDistanceDelta}
-            />
-          </div>
+          <RouteDisplay 
+            startLocation={match.startLocation}
+            endLocation={match.endLocation}
+            startDistanceDelta={match.startDistanceDelta}
+            endDistanceDelta={match.endDistanceDelta}
+            containerProps="bg-white/20 backdrop-blur-sm rounded-lg shadow-lg p-2"
+          />
 
           {/* Action Buttons */}
           <div className="flex justify-center space-x-6 mt-4">

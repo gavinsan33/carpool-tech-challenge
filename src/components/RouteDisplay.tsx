@@ -5,16 +5,18 @@ interface RouteDisplayProps {
   endLocation: string;
   startDistanceDelta: number;
   endDistanceDelta: number;
+  containerProps?: string;
 }
 
 const RouteDisplay = ({ 
   startLocation, 
   endLocation, 
   startDistanceDelta, 
-  endDistanceDelta 
+  endDistanceDelta,
+  containerProps = '',
 }: RouteDisplayProps) => {
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className={`flex flex-col items-center justify-center w-full ${containerProps}`}>
       <div className="relative flex items-center justify-between w-full max-w-[280px] py-1">
         {/* Source Circle with Text Container */}
         <div className="relative flex flex-col items-center min-w-[100px]">
